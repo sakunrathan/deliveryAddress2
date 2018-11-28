@@ -1,0 +1,1 @@
+.m-imagemap img {max-width: 100%;height: auto;} .js .imagemap__item {display: none;} @media screen and (min-width: 48em) {.imagemap__item:target {display: block;}.imagemap__item:target > .imagemap__text {display: block;}}

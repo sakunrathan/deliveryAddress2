@@ -1,0 +1,341 @@
+.btn-atk-primary {
+  font-size: 18px;
+  background-color: #37BDE0;
+  border-bottom: 3px solid #389ABF;
+  color: #fff;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn-atk-primary:hover {
+  background-color: #3dabc7;
+}
+
+.btn-atk-danger {
+  font-size: 18px;
+  background-color: #EC1D23;
+  border-bottom: 3px solid #ad1616;
+  color: #fff;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn-atk-danger:hover {
+  background-color: #da1c21;
+}
+
+.btn-atk-success {
+  font-size: 18px;
+  background-color: #23d160;
+  border-bottom: 3px solid #33bf22;
+  color: #fff;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn-atk-success:hover {
+  background-color: #26ab59;
+}
+
+.btn-atk-light {
+  font-size: 18px;
+  background-color: #ECECEC;
+  border-bottom: 3px solid #C2C6C7;
+  color: #B3B3B3;
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn-atk-light:hover {
+  background-color: #dedede;
+}
+
+.btn-atk-light:focus,
+.btn-atk-danger:focus,
+.btn-atk-success.focus,
+.btn-atk-light:active,
+.btn-atk-danger.active,
+.btn-atk-success.active {
+  outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+
+/* More Spacing Utilities Margin & Padding */
+
+/* Margin */
+
+.m-6 {
+  margin: 4rem !important;
+}
+
+.mt-6,
+.my-6 {
+  margin-top: 4rem !important;
+}
+
+.mr-6,
+.mx-6 {
+  margin-right: 4rem !important;
+}
+
+.mb-7,
+.my-7 {
+  margin-bottom: 5rem !important;
+}
+
+.m-7 {
+  margin: 5rem !important;
+}
+
+.mt-7,
+.my-7 {
+  margin-top: 5rem !important;
+}
+
+.mr-7,
+.mx-7 {
+  margin-right: 5rem !important;
+}
+
+.mb-7,
+.my-7 {
+  margin-bottom: 5rem !important;
+}
+
+/* Padding */
+
+.p-6 {
+  padding: 4rem !important;
+}
+
+.pt-6,
+.py-6 {
+  padding-top: 4rem !important;
+}
+
+.pr-6,
+.px-6 {
+  padding-right: 4rem !important;
+}
+
+.pb-6,
+.py-6 {
+  padding-bottom: 4rem !important;
+}
+
+.pl-6,
+.px-6 {
+  padding-left: 4rem !important;
+}
+
+.p-7 {
+  padding: 5rem !important;
+}
+
+.pt-7,
+.py-7 {
+  padding-top: 5rem !important;
+}
+
+.pr-7,
+.px-7 {
+  padding-right: 5rem !important;
+}
+
+.pb-7,
+.py-7 {
+  padding-bottom: 5rem !important;
+}
+
+.pl-7,
+.px-7 {
+  padding-left: 5rem !important;
+}
+
+.is-size-1 {
+  font-size: 3rem !important;
+}
+
+.is-size-2 {
+  font-size: 2.5rem !important;
+}
+
+.is-size-3 {
+  font-size: 2rem !important;
+}
+
+.is-size-4 {
+  font-size: 1.5rem !important;
+}
+
+.is-size-5 {
+  font-size: 1.25rem !important;
+}
+
+.is-size-6 {
+  font-size: 1rem !important;
+}
+
+.is-size-7 {
+  font-size: 0.75rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .is-size-1-mobile {
+    font-size: 3rem !important;
+  }
+  .is-size-2-mobile {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-mobile {
+    font-size: 2rem !important;
+  }
+  .is-size-4-mobile {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-mobile {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-mobile {
+    font-size: 1rem !important;
+  }
+  .is-size-7-mobile {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 769px),
+print {
+  .is-size-1-tablet {
+    font-size: 3rem !important;
+  }
+  .is-size-2-tablet {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-tablet {
+    font-size: 2rem !important;
+  }
+  .is-size-4-tablet {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-tablet {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-tablet {
+    font-size: 1rem !important;
+  }
+  .is-size-7-tablet {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .is-size-1-touch {
+    font-size: 3rem !important;
+  }
+  .is-size-2-touch {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-touch {
+    font-size: 2rem !important;
+  }
+  .is-size-4-touch {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-touch {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-touch {
+    font-size: 1rem !important;
+  }
+  .is-size-7-touch {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .is-size-1-desktop {
+    font-size: 3rem !important;
+  }
+  .is-size-2-desktop {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-desktop {
+    font-size: 2rem !important;
+  }
+  .is-size-4-desktop {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-desktop {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-desktop {
+    font-size: 1rem !important;
+  }
+  .is-size-7-desktop {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .is-size-1-widescreen {
+    font-size: 3rem !important;
+  }
+  .is-size-2-widescreen {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-widescreen {
+    font-size: 2rem !important;
+  }
+  .is-size-4-widescreen {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-widescreen {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-widescreen {
+    font-size: 1rem !important;
+  }
+  .is-size-7-widescreen {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .is-size-1-fullhd {
+    font-size: 3rem !important;
+  }
+  .is-size-2-fullhd {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-fullhd {
+    font-size: 2rem !important;
+  }
+  .is-size-4-fullhd {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-fullhd {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-fullhd {
+    font-size: 1rem !important;
+  }
+  .is-size-7-fullhd {
+    font-size: 0.75rem !important;
+  }
+}
+

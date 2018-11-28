@@ -1,0 +1,313 @@
+<div style="padding-bottom: 2%">
+  <div class="inner-loading">
+    <div class="loading-wheel"></div>
+  </div>
+  <div class="row height_80_px headerCover mx-0">
+    <div class="col-6 offset-1 offset-sm-0 col-lg-5 offset-lg-1 height_100_pc">
+      <div style="vertical-align: middle; position: absolute;top: 50%;" class="middle">
+        <!-- <a href="#" onclick="changeToPage('https://www.allticket.com/findex.html');"> -->
+        <img alt="#" src="assets/images/icon/Icon_Web_All_Ticket_Allticket_Logo.png" class="banner" id="ticketsLogo">
+        <!-- </a> -->
+      </div>
+    </div>
+  </div>
+  <h2 class="heading text-center is-size-4-mobile mt-4"><i aria-hidden="true" class="fa fa-envelope" style="color:#4c69ba;"></i>
+    <b style="color:#4c69ba;">Delivery Address</b>
+  </h2>
+  <div class="tab-content bg-white p-5 rounded-bottom rounded-left" id="myTabContent">
+    <div aria-labelledby="home-tab" class="tab-pane fade show active" id="home" role="tabpanel">
+      <div style=" border: 15px solid #fff; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); ">
+        <div class="row justify-content-md-center">
+          <div class="col col-12 col-md-6">
+            <div class="form-group">
+
+              <div class="lis-search">
+                <i class="fa fa-user-circle" style="color:#4c69ba;"></i><b style="color:#4c69ba;"> Reserve ID</b>
+              </div>
+              <input  class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+                id="reserveID" maxlength="20" name="reserveID" placeholder="" type="text" [(ngModel)]="reserveMd" (keypress)="keypressTel($event, reserveMd)">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col col-12 col-md-6">
+            <div class="form-group">
+              <div class="lis-search">
+                <i class="fa fa-id-card lis-primary" style="color:#4c69ba;"></i><b style="color:#4c69ba;"> ID Card No /
+                  Passport No</b>
+              </div>
+              <input  class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4" id="idCard"
+                maxlength="50" name="idCard" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col col-6 col-md-3">
+            <button (click)="callAPIGetRaceAvailable()" class="btn btn-warning" style="background-color: #4c69ba; color: aliceblue; border-color: #4c69ba; width: 100%;"
+              type="button"><i class="fa fa-search pl-1"></i> Search</button>
+          </div>
+          <div class="col col-6 col-md-3">
+            <button (click)="ClearData()" class="btn btn-warning" style="background-color: #dd4b39; color: aliceblue; border-color: #dd4b39; width: 100%;"
+              type="button"><i class="fa fa-minus-square pl-1"></i> Clear</button>
+          </div>
+        </div>
+      </div>
+      <br> <!-- <i class="fa fa-circle-o-notch fa-spin" *ngIf="isReserveExecute"></i>  -->
+      <div  [hidden]="showDetail == 'F'" style=" border: 15px solid #fff; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); " >
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Event Name / ชื่อการแสดง</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input value="{{eventName}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4" style="background-color: white; border: 0px;"
+                [disabled]="true">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Round / รอบการแสดง</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input value="{{round}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4" style="background-color: white; border: 0px;"
+              [disabled]="true">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Zone / โซน</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input value="{{zone}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4" style="background-color: white; border: 0px;"
+              [disabled]="true">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Reserve ID</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input value="{{reserveID}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4" style="background-color: white; border: 0px;"
+              [disabled]="true">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>ID Card No / Passport No</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input value="{{idCard}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4" style="background-color: white; border: 0px;"
+              [disabled]="true">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>First name  / ชื่อ<span style="color:red;"> *</span></b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input id="firstNameId" value="{{firstName}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+              maxlength="150" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Last Name / นามสกุล<span style="color:red;"> *</span></b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input id="lastNameId" value="{{lastName}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+              maxlength="150" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Address No / บ้านเลขที่<span style="color:red;"> *</span></b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input id="addressNoId" value="{{addressNo}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+              maxlength="100" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Name / อาคาร</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input id="nameId" value="{{name}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+                maxlength="25" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Village Name / หมู่บ้าน</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input id="village" value="{{village}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+              maxlength="25"   type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Village No / หมู่ที่</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input [(ngModel)]="VillageNoMd" (keypress)="keypressTel($event, VillageNoMd)" id="VillageNoId" value="{{VillageNo}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+                maxlength="15" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Road / ถนน</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input id="roadId" value="{{road}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+                maxlength="15" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Soi / ซอย</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input id="soiId" value="{{soi}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+                maxlength="100" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Province / จังหวัด <span style="color:red;"> *</span></b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <select #myProvince [(ngModel)]='provinceMd' id="provinceId" (change)="changeProvince(myProvince.value)" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid">
+                <option value=""> กรุณาเลือก </option>
+                <option value="{{pv.provinceCode}}" *ngFor="let pv of province">{{pv.nameLocal}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>District / อำเภอ / เขต <span style="color:red;"> * </span></b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <select #myAmphur [(ngModel)]='amphurMd' id="amphurId" (change)="changeAmphur(myProvince.value,myAmphur.value)" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid" [disabled]="isAmphurExecute">
+                <option value=""> กรุณาเลือก </option>
+                <option value="{{ap.amphurCode}}" *ngFor="let ap of amphur">{{ap.nameLocal}}</option>
+              </select>
+            </div>
+          </div>
+         
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>City / ตำบล / แขวง <span style="color:red;"> * </span></b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <select #myTumbon [(ngModel)]='tumbonMd' id="tumbonId" (change)="changeTumbon()" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid" [disabled]="isTumbonExecute">
+                <option value=""> กรุณาเลือก </option>
+                <option value="{{tb.tumbonCode}}" *ngFor="let tb of tumbon">{{tb.nameLocal}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-4">
+            <div class="form-group">
+              <b>Postcode / รหัสไปรษณีย์ <span style="color:red;"> *</span></b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group">
+              <input class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4 ng-untouched ng-pristine ng-valid"
+                maxlength="15" value="{{postCode}}" [disabled]="true" style="background-color: white;"  type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center" [hidden]="update == ''">
+          <div class="col-12 col-md-4">
+            <div class="form-group" style="color:#dd4b39;">
+              <b>Update Date</b>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <div class="form-group" style="color:#dd4b39;">
+              <input value="{{update}}" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 pr-4" style="background-color: white; border: 0px;color:#dd4b39;" [disabled]="true">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col col-12 col-md-3">
+            <button class="btn btn-warning" style="background-color: #4c69ba; color: aliceblue; border-color: #4c69ba; width: 100%;" [disabled]="isSaveExecute"
+             (click)="callAPIGetInsert()" type="button"><i aria-hidden="true" class="fa fa-floppy-o"></i> Save <i class="fa fa-circle-o-notch fa-spin" *ngIf="isSaveExecute"></i></button>
+
+          </div>
+        </div>
+        <p class="float-right" style="color:#dd4b39;margin: -1px;font-size: 14px;">
+          * Shipped with in Thailand only. / จัดส่งภายในประเทศไทยเท่านั้น 
+        </p>
+      </div>
+      <p class="float-right" style="color:#F5F5F5;margin: -1px;font-size: 14px;">
+        version 0.9
+      </p>
+    </div>
+  </div>
+</div>

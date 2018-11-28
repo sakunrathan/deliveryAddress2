@@ -1,0 +1,298 @@
+.audienceInfoTicketWrapper{
+  padding: 15px 15% 0px 15%;
+}
+
+.fillInTopic{
+  font-size: 18px;
+}
+
+.container {
+  max-width: 500px;
+  padding: 0 2rem 0 2rem;
+}
+
+.searchBox {
+  padding-top: 15px;
+  border: 1px solid #999999;
+  border-radius: 20px;
+}
+
+.pageTopic {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.buttonWrapper {
+	text-align: center; 
+}
+
+.passengerBox {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.passengerBoxRow {
+  line-height: 40px
+}
+
+.header-box {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.footer-box {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.passengerSeq {
+  padding: 5px 5px 5px 20px;
+  background: #035392;
+  border: 2px solid #bcbec0;
+  font-size: 18px;
+  color: white;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.titleNidno {
+    padding-left: 0;
+    border-right: 2px solid #bcbec0;
+}
+
+.title {
+  border-right: 2px solid #bcbec0;
+}
+
+.border1s {
+  border-bottom: 2px solid #bcbec0;
+  border-left: 2px solid #bcbec0;
+  border-right: 2px solid #bcbec0;
+}
+
+.divShowPopup{
+  word-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+}
+
+.passengerBoxRow .form-control {
+  height: 100% !important;
+  border-radius: 0;
+}
+.red {
+  color: red;
+}
+
+.p0 {
+  padding: 0px;
+}
+
+.noBorder {
+  border: 0px solid;
+}
+
+select.form-control {
+  color: black;
+}
+
+.headerCover {
+  background-color: #f6f6f6;
+}
+.height_80_px {
+  height: 80px;
+}
+.txtAlgLeft {
+  text-align: left;
+}
+.height_100_pc {
+  height: 100%;
+}
+
+.banner {
+  display: block;
+  width: 100%;  
+}
+
+.middle {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);  
+}
+
+.box-close-left {
+  border-bottom-left-radius: 8px !important;
+}
+
+.box-close {
+  border-bottom-right-radius: 8px !important;
+}
+
+.performInfo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 0.5rem;
+  line-height: 2;
+}
+
+.inputReadOnly {
+  border: 0;
+  background-color: transparent;
+}
+
+
+.pointer-none {
+  pointer-events: none;
+}
+
+.inner-loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:  flex-start;
+  align-items: center;
+  background-color: rgba(93, 93, 93, 0.2901960784313726);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  z-index: 2;
+}
+
+.inner-loading.show {
+  opacity: 1;
+  visibility: visible;
+  /* pointer-events: none; */
+}
+
+.loading-wheel {
+  width: 94px;
+  height: 94px;
+  position: relative;
+  margin: 0 auto;
+  border: 6px solid #fe6716;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: cssload-spin 575ms infinite linear;
+  -o-animation: cssload-spin 575ms infinite linear;
+  -ms-animation: cssload-spin 575ms infinite linear;
+  -webkit-animation: cssload-spin 575ms infinite linear;
+  -moz-animation: cssload-spin 575ms infinite linear
+}
+
+.spnEnterSite{
+  vertical-align: middle;
+  display: table-cell;
+  color: #adadad;
+}
+
+.enterSiteA{
+  color: #adadad;
+}
+
+
+.dspTable {
+  display: table;
+}
+
+.height_100_pc {
+  height: 100%;
+}
+
+.col-5 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+
+.text-align-right, .txtAlgRight {
+  text-align: right;
+}
+
+.divrecapcha {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes cssload-spin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@-o-keyframes cssload-spin {
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@-ms-keyframes cssload-spin {
+  100% {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@-webkit-keyframes cssload-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@-moz-keyframes cssload-spin {
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .busTopic {
+    text-align: center;
+  }
+  .busTopic img {
+    max-width: 80px;
+  }
+  .busTopic span {
+    font-size: 16px;
+    padding: 0px;
+    font-weight: 600;
+  }
+  .banner {
+    height: 30px;
+    width: 80px;
+  }
+  .container {
+    max-width: 400px;
+  }
+  .passengerSeq {
+    font-size: 17px;
+  }
+  .title {
+    border-right: 0;
+    font-weight: 600px;
+  }
+  .border1s {
+    border-bottom: 1px solid #bcbec0;
+  }
+  .box-close {
+    border-bottom-left-radius: 8px !important;
+  }
+  .box-close-left {
+    border-bottom-left-radius: 0 !important;
+  }
+
+  
+}
